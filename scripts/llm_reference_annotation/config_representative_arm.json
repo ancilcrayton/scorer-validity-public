@@ -1,0 +1,27 @@
+{
+  "name": "representative_arm",
+  "schema": "uup_unsupported_assertion",
+  "prompt": "prompt.md",
+  "settings": {
+    "temperature": 0.0,
+    "seed": 20260729,
+    "max_completion_tokens": 1024
+  },
+  "roles": {
+    "primary": {
+      "annotator_id": "A1",
+      "model": "mistralai/mistral-large-2512",
+      "input_csv": "data/confirmatory_v1/human_validation/representative_arm_audit.csv"
+    },
+    "secondary": {
+      "annotator_id": "A2",
+      "model": "minimax/minimax-m3",
+      "input_csv": "data/confirmatory_v1/human_validation/representative_arm_audit_dual.csv"
+    }
+  },
+  "evidence_branches": [
+    "evidence_valid",
+    "evidence_false",
+    "evidence_reassurance"
+  ]
+}

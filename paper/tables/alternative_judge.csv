@@ -1,0 +1,7 @@
+arm,pipeline_tp,pipeline_predicted_positive,pipeline_precision,alternative_tp,alternative_predicted_positive,alternative_precision,alternative_reference_agreement
+Spontaneous,27,34,0.794117647,25,26,0.961538462,0.937500000
+Soft cue,7,8,0.875000000,9,10,0.900000000,0.958333333
+Neutral,23,24,0.958333333,23,23,1.000000000,1.000000000
+Existence,15,18,0.833333333,16,19,0.842105263,0.937500000
+Confidence,20,25,0.800000000,18,21,0.857142857,0.895833333
+Authority,28,29,0.965517241,28,30,0.933333333,0.958333333

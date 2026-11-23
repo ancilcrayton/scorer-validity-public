@@ -1,0 +1,7 @@
+record_id,scorer,category
+anthropic/claude-sonnet-5::clean_1ca287f951::existence_assertion::t1,alternative_automatic_judge,hypothetical_or_speculative_completion
+qwen/qwen3-32b::clean_da6e21559f::existence_assertion::t1,alternative_automatic_judge,hypothetical_or_speculative_completion
+qwen/qwen3-32b::clean_eef95ff4f7::existence_assertion::t1,alternative_automatic_judge,hypothetical_or_speculative_completion
+qwen/qwen3-32b::clean_62decbc3c1::existence_assertion::t1,automatic_pipeline,hypothetical_abstention_or_needs_context
+qwen/qwen3-8b::clean_28f5f1ed98::existence_assertion::t1,automatic_pipeline,hypothetical_abstention_or_needs_context
+qwen/qwen3-8b::clean_e30af57a38::existence_assertion::t1,automatic_pipeline,hypothetical_abstention_or_needs_context

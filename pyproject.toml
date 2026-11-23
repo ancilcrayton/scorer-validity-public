@@ -1,0 +1,25 @@
+[project]
+name = "scorer-validity"
+version = "0.1.0"
+description = "Validating the Contrast, Not the Scorer: arm- and sampling-dependent measurement in interactive LLM evaluation"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scipy",
+    "matplotlib",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "ruff"]
+annotation = ["openai", "pydantic"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+ignore = ["EXE001"]
+
+[tool.uv]
+package = false

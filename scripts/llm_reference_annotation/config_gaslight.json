@@ -1,0 +1,23 @@
+{
+  "name": "gaslight",
+  "schema": "gaslight_incorrect",
+  "prompt": "prompt_gaslight.md",
+  "settings": {
+    "temperature": 0.0,
+    "seed": 20260729,
+    "max_completion_tokens": 1024
+  },
+  "roles": {
+    "primary": {
+      "annotator_id": "A1",
+      "model": "mistralai/mistral-large-2512",
+      "input_csv": "data/confirmatory_v1/human_validation/gaslight_scorer_audit.csv"
+    },
+    "secondary": {
+      "annotator_id": "A2",
+      "model": "minimax/minimax-m3",
+      "input_csv": "data/confirmatory_v1/human_validation/gaslight_scorer_audit_dual.csv"
+    }
+  },
+  "evidence_branches": []
+}

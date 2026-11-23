@@ -1,0 +1,2 @@
+contrast,n_pairs,automatic_rd,primary_rater_rd,primary_ci_low,primary_ci_high,decision
+Authority - Existence,100,0.120000000,0.150000000,0.063155524,0.242725252,quarantine: comparator changes the construct

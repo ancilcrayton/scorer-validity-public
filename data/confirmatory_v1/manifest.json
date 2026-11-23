@@ -1,0 +1,730 @@
+{
+  "manifest_version": 1,
+  "package": "scorer-validity",
+  "freeze": "confirmatory_v1",
+  "upstream": {
+    "repository": "unknown-under-pressure",
+    "revision": "cf474f01fa97a402b4f928c2e9383526a1bce113",
+    "note": "Per-file source hashes are authoritative because the frozen ratings included uncommitted release preparation at packaging time."
+  },
+  "annotation_protocol": {
+    "historical_field_prefix": "human_",
+    "labels_are_human_annotations": false,
+    "primary": {
+      "annotator_id": "A1",
+      "display_name": "Mistral Large 3 2512",
+      "model": "mistralai/mistral-large-2512"
+    },
+    "secondary": {
+      "annotator_id": "A2",
+      "display_name": "MiniMax M3",
+      "model": "minimax/minimax-m3"
+    },
+    "temperature": 0.0,
+    "seed": 20260729,
+    "run_id": "unused_families_20260819",
+    "protocol_exceptions": [
+      {
+        "record_id": "qwen/qwen3-32b::clean_9e050df0a6::neutral_repetition::t1",
+        "role": "secondary",
+        "fallback": "MiniMax M3 with low reasoning effort after repeated null completions; all other settings unchanged"
+      }
+    ]
+  },
+  "forbidden_columns": [
+    "cache_hit",
+    "created_at",
+    "judge_rationale",
+    "messages",
+    "provider",
+    "provider_name",
+    "raw_reasoning",
+    "raw_response",
+    "raw_response_text",
+    "reasoning",
+    "timestamp",
+    "timestamp_utc"
+  ],
+  "files": [
+    {
+      "path": "data/confirmatory_v1/human_validation/representative_arm_audit.csv",
+      "description": "Balanced representative arm-by-model audit (A1)",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/representative_arm_audit.csv",
+        "sha256": "92e4574ca5aee51522cb68eeb39a61f9cbb277e63976d870f373dab3ae4d306d"
+      },
+      "released_sha256": "16ecf82a7a6231bd238604cbdfc9c28d86f35f370a20be902362c417c35de7f3",
+      "rows": 288,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "branch",
+        "domain",
+        "layer",
+        "unsupported_assertion",
+        "unsupported_answer_subtype",
+        "baseline_appropriate",
+        "response_text",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "epistemic_behavior",
+        "transition",
+        "scoring_source",
+        "audit_role",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt"
+      ],
+      "empty_response_record_ids": [],
+      "branch_counts": {
+        "authority_pressure": 48,
+        "confidence_pressure": 48,
+        "cue_baseline": 48,
+        "existence_assertion": 48,
+        "neutral_repetition": 48,
+        "spontaneous_baseline": 48
+      },
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": 20260805,
+        "design": "48 clean responses per arm, balanced at eight per evaluated model"
+      },
+      "annotation": {
+        "role": "primary",
+        "annotator_id": "A1",
+        "model": "mistralai/mistral-large-2512",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/human_validation/representative_arm_audit_dual.csv",
+      "description": "Representative audit dual-rater subset (A2)",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/representative_arm_audit_dual.csv",
+        "sha256": "458d3193ee980719ee33fdaebe39dece5167f7deb77e86d472f72cb54cb608ea"
+      },
+      "released_sha256": "4627860a3e1c789eb597f164e73767c1801aa7f2d815bb56cff6f79cdbecba85",
+      "rows": 96,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "branch",
+        "domain",
+        "layer",
+        "unsupported_assertion",
+        "unsupported_answer_subtype",
+        "baseline_appropriate",
+        "response_text",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "epistemic_behavior",
+        "transition",
+        "scoring_source",
+        "audit_role",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt"
+      ],
+      "empty_response_record_ids": [],
+      "branch_counts": {
+        "authority_pressure": 24,
+        "confidence_pressure": 24,
+        "existence_assertion": 24,
+        "neutral_repetition": 24
+      },
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": 20260805,
+        "design": "Prespecified 96-row subset across four arms"
+      },
+      "annotation": {
+        "role": "secondary",
+        "annotator_id": "A2",
+        "model": "minimax/minimax-m3",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded.csv",
+      "description": "Four-arm, 300-key factorial paired audit (A1)",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded.csv",
+        "sha256": "ab3cb4f40d13cc544dab48315e9177683fcf6393404e0084470314557e395ba7"
+      },
+      "released_sha256": "37c4dd61a7d6e40247a1a553b6b559101149ba8ef3242be4b87225e82b00d002",
+      "rows": 1200,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "branch",
+        "domain",
+        "layer",
+        "unsupported_assertion",
+        "unsupported_answer_subtype",
+        "baseline_appropriate",
+        "response_text",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "epistemic_behavior",
+        "transition",
+        "scoring_source",
+        "audit_role",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt"
+      ],
+      "empty_response_record_ids": [
+        "fact_qwen/qwen3-32b_clean_2f905f372d_existence_directness"
+      ],
+      "branch_counts": {
+        "certainty_only": 300,
+        "confidence_pressure": 300,
+        "existence_directness": 300,
+        "neutral_repetition": 300
+      },
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": 20260804,
+        "design": "300 complete item-model keys, 50 per evaluated model"
+      },
+      "annotation": {
+        "role": "primary",
+        "annotator_id": "A1",
+        "model": "mistralai/mistral-large-2512",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded_secondary_full.csv",
+      "description": "Four-arm, 300-key factorial paired audit (A2)",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded_secondary_full.csv",
+        "sha256": "5f0bce57fb203b05791da615d540eced7e6ba77163ad205e9a804cc95a66bb62"
+      },
+      "released_sha256": "108cba2a5e50170251a7d5a2dfb6d54862bf90a4685ed7109c04e9762e72aacd",
+      "rows": 1200,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "branch",
+        "domain",
+        "layer",
+        "unsupported_assertion",
+        "unsupported_answer_subtype",
+        "baseline_appropriate",
+        "response_text",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "epistemic_behavior",
+        "transition",
+        "scoring_source",
+        "audit_role",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt"
+      ],
+      "empty_response_record_ids": [
+        "fact_qwen/qwen3-32b_clean_2f905f372d_existence_directness"
+      ],
+      "branch_counts": {
+        "certainty_only": 300,
+        "confidence_pressure": 300,
+        "existence_directness": 300,
+        "neutral_repetition": 300
+      },
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": 20260804,
+        "design": "Same 1,200 responses independently rated by A2"
+      },
+      "annotation": {
+        "role": "secondary",
+        "annotator_id": "A2",
+        "model": "minimax/minimax-m3",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/human_validation/hard_audit_primary.csv",
+      "description": "Primary 550-row hard-case audit",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/review_sample.csv",
+        "sha256": "95c3e3077b89bd43b35a98943bf14dca2957e5a603f885ae8ab2879e760eb9ec"
+      },
+      "released_sha256": "6ac8085867234d47571bcf0abda857c7d9c8fae30fde29b6aa29655dd4bb41f4",
+      "rows": 550,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "branch",
+        "domain",
+        "layer",
+        "unsupported_assertion",
+        "unsupported_answer_subtype",
+        "baseline_appropriate",
+        "response_text",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "epistemic_behavior",
+        "transition",
+        "scoring_source",
+        "audit_role",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt"
+      ],
+      "empty_response_record_ids": [],
+      "branch_counts": {
+        "authority_pressure": 111,
+        "confidence_pressure": 125,
+        "cue_baseline": 74,
+        "evidence_false": 24,
+        "evidence_reassurance": 24,
+        "evidence_valid": 24,
+        "existence_assertion": 63,
+        "neutral_repetition": 81,
+        "spontaneous_baseline": 24
+      },
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": null,
+        "design": "Tiered stress sample enriched for pressure and routed cases; not a probability sample"
+      },
+      "annotation": {
+        "role": "primary",
+        "annotator_id": "A1",
+        "model": "mistralai/mistral-large-2512",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/human_validation/paired_h3_audit.csv",
+      "description": "Primary paired H3 audit (Authority minus Existence)",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/paired_audit_sample.csv",
+        "sha256": "f52d389bcd9adf2adfbd3eb920b249f7b5eb3d26756c7a8adf7e97659848d7d2"
+      },
+      "released_sha256": "4b82a8b9beeb541f7c6a330b06d8f67e1eb96b3ed8bdca0158eb91025db0ccd0",
+      "rows": 200,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "branch",
+        "domain",
+        "layer",
+        "unsupported_assertion",
+        "unsupported_answer_subtype",
+        "baseline_appropriate",
+        "response_text",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "epistemic_behavior",
+        "transition",
+        "scoring_source",
+        "audit_role",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt",
+        "paired_contrast"
+      ],
+      "empty_response_record_ids": [],
+      "branch_counts": {
+        "authority_pressure": 100,
+        "existence_assertion": 100
+      },
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": 20260803,
+        "design": "100 complete item-model keys; H3 subset of the separate paired audit"
+      },
+      "annotation": {
+        "role": "primary",
+        "annotator_id": "A1",
+        "model": "mistralai/mistral-large-2512",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/human_validation/gaslight_scorer_audit.csv",
+      "description": "Gaslight non-original incorrectness-heuristic audit (A1)",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/gaslight_scorer_audit.csv",
+        "sha256": "94717163c1712128d7e5614075648074734d130d6a26237d3667ad2ab2f07be8"
+      },
+      "released_sha256": "7d71b76dbb191c2be0588b890705372c0ffd80aa8bc050c71523a77d943833de",
+      "rows": 300,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "statement_id",
+        "modifier_id",
+        "modifier_category",
+        "statement_category",
+        "branch",
+        "domain",
+        "layer",
+        "response_text",
+        "truth",
+        "false_statement",
+        "auto_incorrect",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "audit_role",
+        "audit_schema",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt"
+      ],
+      "empty_response_record_ids": [
+        "gl_google/gemma-3-4b-it_47_136_existence_t2",
+        "gl_google/gemma-3-4b-it_49_140_pressure_t2",
+        "gl_google/gemma-3-4b-it_55_BIO_55_pressure_t2",
+        "gl_google/gemma-3-4b-it_58_85_pressure_t2",
+        "gl_google/gemma-3-4b-it_62_BIO_62_pressure_t2",
+        "gl_google/gemma-3-4b-it_76_BIO_76_pressure_t2"
+      ],
+      "branch_counts": {
+        "baseline": 60,
+        "existence_t2": 60,
+        "neutral_t2": 60,
+        "pressure": 60,
+        "pressure_t2": 60
+      },
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": 20260804,
+        "design": "60 keys with five audited arms"
+      },
+      "annotation": {
+        "role": "primary",
+        "annotator_id": "A1",
+        "model": "mistralai/mistral-large-2512",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/human_validation/gaslight_scorer_audit_dual.csv",
+      "description": "Gaslight dual-rater subset (A2)",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/gaslight_scorer_audit_dual.csv",
+        "sha256": "6c685a7da668b5f0506ad35e7e836c52b53c9669320d3f28c257691138862c5c"
+      },
+      "released_sha256": "327e7b552889c10c2652f8bc82dc89646c31d2ab39dbaea005f96d7713929c0d",
+      "rows": 100,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "statement_id",
+        "modifier_id",
+        "modifier_category",
+        "statement_category",
+        "branch",
+        "domain",
+        "layer",
+        "response_text",
+        "truth",
+        "false_statement",
+        "auto_incorrect",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "audit_role",
+        "audit_schema",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt"
+      ],
+      "empty_response_record_ids": [],
+      "branch_counts": {
+        "baseline": 20,
+        "existence_t2": 20,
+        "neutral_t2": 20,
+        "pressure": 20,
+        "pressure_t2": 20
+      },
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": 20260804,
+        "design": "100-row balanced subset, 20 rows per arm"
+      },
+      "annotation": {
+        "role": "secondary",
+        "annotator_id": "A2",
+        "model": "minimax/minimax-m3",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/human_validation/sycon_judge_audit.csv",
+      "description": "SYCON non-original acceptance-judge audit (A1)",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/sycon_judge_audit.csv",
+        "sha256": "5371bc224ae75bf968de9fa2dd6c1f75038c7ac0233ab5795c02e07bd043352a"
+      },
+      "released_sha256": "1f7524e98b4fc363281b77477ba1db351f5f8968ffd74c542502d6e1d561adfe",
+      "rows": 900,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "topic_id",
+        "trajectory",
+        "turn",
+        "branch",
+        "domain",
+        "layer",
+        "response_text",
+        "question",
+        "presupposition",
+        "correction",
+        "auto_accepts",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "audit_role",
+        "audit_schema",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt"
+      ],
+      "empty_response_record_ids": [
+        "sy_anthropic/claude-sonnet-5_sycon_fp_087_neutral_t4"
+      ],
+      "branch_counts": {
+        "existence_t0": 60,
+        "existence_t1": 60,
+        "existence_t2": 60,
+        "existence_t3": 60,
+        "existence_t4": 60,
+        "neutral_t0": 60,
+        "neutral_t1": 60,
+        "neutral_t2": 60,
+        "neutral_t3": 60,
+        "neutral_t4": 60,
+        "pressure_t0": 60,
+        "pressure_t1": 60,
+        "pressure_t2": 60,
+        "pressure_t3": 60,
+        "pressure_t4": 60
+      },
+      "trajectory_counts": {
+        "existence": 300,
+        "neutral": 300,
+        "pressure": 300
+      },
+      "sampling": {
+        "seed": 20260804,
+        "design": "60 topic-model trajectories per condition and five turns per trajectory"
+      },
+      "annotation": {
+        "role": "primary",
+        "annotator_id": "A1",
+        "model": "mistralai/mistral-large-2512",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/human_validation/sycon_judge_audit_dual.csv",
+      "description": "SYCON dual-rater subset (A2)",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "data/confirmatory_v1/human_validation/sycon_judge_audit_dual.csv",
+        "sha256": "dbd52e2c360e42da71056d39600495475470476ed9b794cfefe77572f22c04cf"
+      },
+      "released_sha256": "5a783318c670eb04d0c48b5dfec284d0dac95084caa03ff1f33b057b87dda3a8",
+      "rows": 300,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "topic_id",
+        "trajectory",
+        "turn",
+        "branch",
+        "domain",
+        "layer",
+        "response_text",
+        "question",
+        "presupposition",
+        "correction",
+        "auto_accepts",
+        "human_unsupported_assertion",
+        "human_appropriate_boundary",
+        "human_subtype",
+        "human_h4_appropriate",
+        "annotator_id",
+        "dual_annotation",
+        "audit_role",
+        "audit_schema",
+        "annotator_model",
+        "annotation_run_id",
+        "annotation_prompt"
+      ],
+      "empty_response_record_ids": [],
+      "branch_counts": {
+        "existence_t0": 20,
+        "existence_t1": 20,
+        "existence_t2": 20,
+        "existence_t3": 20,
+        "existence_t4": 20,
+        "neutral_t0": 20,
+        "neutral_t1": 20,
+        "neutral_t2": 20,
+        "neutral_t3": 20,
+        "neutral_t4": 20,
+        "pressure_t0": 20,
+        "pressure_t1": 20,
+        "pressure_t2": 20,
+        "pressure_t3": 20,
+        "pressure_t4": 20
+      },
+      "trajectory_counts": {
+        "existence": 100,
+        "neutral": 100,
+        "pressure": 100
+      },
+      "sampling": {
+        "seed": 20260804,
+        "design": "20 topic-model trajectories per condition and five turns per trajectory"
+      },
+      "annotation": {
+        "role": "secondary",
+        "annotator_id": "A2",
+        "model": "minimax/minimax-m3",
+        "temperature": 0.0,
+        "seed": 20260729,
+        "run_id": "unused_families_20260819"
+      }
+    },
+    {
+      "path": "data/confirmatory_v1/alternative_judge/representative_predictions.csv",
+      "description": "Frozen Claude Sonnet 5 alternative automatic-judge predictions",
+      "source": {
+        "repository": "unknown-under-pressure",
+        "path": "results/confirmatory_v1/statistics/alt_judge_representative.csv",
+        "sha256": "af631de5ceb47c822abe52fbd15921a9834d2cc6554e32fe1a854f90a3988d3c"
+      },
+      "released_sha256": "930a71a16fb52e71e49cac97632aa948b517a9bf52c89c1aa3a24b34fe01d9fe",
+      "rows": 288,
+      "schema": [
+        "record_id",
+        "model_slug",
+        "item_id",
+        "branch",
+        "pipeline_unsupported_assertion",
+        "alternative_judge_model",
+        "alternative_unsupported_assertion",
+        "alternative_appropriate_boundary"
+      ],
+      "empty_response_record_ids": [],
+      "branch_counts": {
+        "authority_pressure": 48,
+        "confidence_pressure": 48,
+        "cue_baseline": 48,
+        "existence_assertion": 48,
+        "neutral_repetition": 48,
+        "spontaneous_baseline": 48
+      },
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": null,
+        "design": "The same 288 rows as the representative audit"
+      },
+      "annotation": null
+    },
+    {
+      "path": "data/confirmatory_v1/derived/existence_fp_taxonomy.csv",
+      "description": "Frozen author-coded surface taxonomy for Existence false positives",
+      "source": {
+        "released_inputs": [
+          "data/confirmatory_v1/human_validation/representative_arm_audit.csv",
+          "data/confirmatory_v1/alternative_judge/representative_predictions.csv"
+        ]
+      },
+      "released_sha256": "54ea8f59278508a944b8e521abf10a933fef43ab5ac16c85a5f1398f14c3c98d",
+      "rows": 6,
+      "schema": [
+        "record_id",
+        "scorer",
+        "category"
+      ],
+      "empty_response_record_ids": [],
+      "branch_counts": {},
+      "trajectory_counts": {},
+      "sampling": {
+        "seed": null,
+        "design": "Post hoc single-coder surface classification of six false positives"
+      },
+      "annotation": null
+    }
+  ]
+}

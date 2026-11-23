@@ -1,0 +1,5 @@
+| arm | auto_rate | ref_rate | sensitivity | specificity | corrected_point | corrected_lo | corrected_hi |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Neutral | 0.397 | 0.400 | 1.000 | 0.960 | 0.372 | 0.261 | 0.449 |
+| Confidence | 0.510 | 0.470 | 1.000 | 0.821 | 0.403 | 0.240 | 0.523 |
+| Confidence - Neutral | +0.113 | +0.070 |  |  | +0.032 | -0.146 | +0.197 |

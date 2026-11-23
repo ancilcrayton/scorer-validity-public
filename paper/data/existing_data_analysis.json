@@ -1,0 +1,512 @@
+{
+  "sources": {
+    "representative": "data/confirmatory_v1/human_validation/representative_arm_audit.csv",
+    "representative_dual": "data/confirmatory_v1/human_validation/representative_arm_audit_dual.csv",
+    "factorial": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded.csv",
+    "factorial_secondary": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded_secondary_full.csv"
+  },
+  "arm_correction": {
+    "arms": {
+      "neutral_repetition": {
+        "target_n": 300,
+        "target_auto_positive": 119,
+        "target_auto_rate": 0.39666666666666667,
+        "target_human_positive": 120,
+        "target_human_rate": 0.4,
+        "calibration": {
+          "n": 48,
+          "tp": 23,
+          "fp": 1,
+          "fn": 0,
+          "tn": 24,
+          "sensitivity": 1.0,
+          "specificity": 0.96
+        },
+        "corrected_point": 0.3715277777777778,
+        "corrected_median": 0.37108931120503097,
+        "corrected_interval": [
+          0.26135887585702194,
+          0.44888650608994457
+        ],
+        "valid_draw_share": 1.0
+      },
+      "confidence_pressure": {
+        "target_n": 300,
+        "target_auto_positive": 153,
+        "target_auto_rate": 0.51,
+        "target_human_positive": 141,
+        "target_human_rate": 0.47,
+        "calibration": {
+          "n": 48,
+          "tp": 20,
+          "fp": 5,
+          "fn": 0,
+          "tn": 23,
+          "sensitivity": 1.0,
+          "specificity": 0.8214285714285714
+        },
+        "corrected_point": 0.40347826086956523,
+        "corrected_median": 0.40996270166221727,
+        "corrected_interval": [
+          0.24009610545781782,
+          0.5233147615351195
+        ],
+        "valid_draw_share": 1.0
+      }
+    },
+    "contrast": {
+      "name": "Confidence - Neutral",
+      "automatic_rd": 0.11333333333333334,
+      "human_rd": 0.06999999999999995,
+      "corrected_point": 0.03195048309178744,
+      "corrected_median": 0.0392755281185361,
+      "corrected_interval": [
+        -0.14649567812488332,
+        0.1967301125078306
+      ],
+      "probability_positive": 0.685085
+    },
+    "method": {
+      "estimator": "arm-specific Rogan-Gladen",
+      "uncertainty": "independent Jeffreys-beta draws for target rate, sensitivity, and specificity",
+      "draws": 200000,
+      "seed": 20260805,
+      "caveat": "Post-freeze transport diagnostic; calibration rows are sparse and may overlap the factorial target sample, so the interval is not a confirmatory confidence interval."
+    }
+  },
+  "reference_sensitivity": {
+    "contrasts": [
+      {
+        "contrast": "Certainty-only $-$ Neutral",
+        "n_pairs": 300,
+        "rd": 0.023333333333333334,
+        "minimum_single_label_flips_to_zero": 7,
+        "share_of_pairs": 0.023333333333333334,
+        "share_of_arm_labels": 0.011666666666666667,
+        "bounds": {
+          "0.050000": [
+            -0.07666666666666666,
+            0.1233333333333333
+          ],
+          "0.100000": [
+            -0.17666666666666664,
+            0.22333333333333327
+          ],
+          "0.047500": [
+            -0.07166666666666666,
+            0.11833333333333329
+          ]
+        }
+      },
+      {
+        "contrast": "Confidence $-$ Existence$\\times$Directness",
+        "n_pairs": 300,
+        "rd": -0.16666666666666666,
+        "minimum_single_label_flips_to_zero": 50,
+        "share_of_pairs": 0.16666666666666666,
+        "share_of_arm_labels": 0.08333333333333333,
+        "bounds": {
+          "0.050000": [
+            -0.2666666666666668,
+            -0.06666666666666665
+          ],
+          "0.100000": [
+            -0.3666666666666667,
+            0.033333333333333215
+          ],
+          "0.047500": [
+            -0.2616666666666667,
+            -0.07166666666666677
+          ]
+        }
+      },
+      {
+        "contrast": "Confidence $-$ Neutral",
+        "n_pairs": 300,
+        "rd": 0.07,
+        "minimum_single_label_flips_to_zero": 21,
+        "share_of_pairs": 0.07,
+        "share_of_arm_labels": 0.035,
+        "bounds": {
+          "0.050000": [
+            -0.030000000000000027,
+            0.16999999999999998
+          ],
+          "0.100000": [
+            -0.13,
+            0.2699999999999999
+          ],
+          "0.047500": [
+            -0.025000000000000022,
+            0.16499999999999992
+          ]
+        }
+      }
+    ],
+    "epsilon_grid": [
+      0.05,
+      0.1,
+      0.0475
+    ],
+    "interpretation": "Each epsilon bounds the fraction of labels that may be wrong separately in each arm. The additional empirical value is raw primary-secondary disagreement on the same factorial rows, not an estimated error rate against ground truth."
+  },
+  "dual_reference": {
+    "n": 96,
+    "overall_disagreement": 0.020833333333333332,
+    "by_arm": {
+      "authority_pressure": {
+        "n": 24,
+        "primary_rate": 0.625,
+        "secondary_rate": 0.625,
+        "disagreement": 0.0
+      },
+      "confidence_pressure": {
+        "n": 24,
+        "primary_rate": 0.5,
+        "secondary_rate": 0.5416666666666666,
+        "disagreement": 0.041666666666666664
+      },
+      "existence_assertion": {
+        "n": 24,
+        "primary_rate": 0.3333333333333333,
+        "secondary_rate": 0.3333333333333333,
+        "disagreement": 0.0
+      },
+      "neutral_repetition": {
+        "n": 24,
+        "primary_rate": 0.5,
+        "secondary_rate": 0.4583333333333333,
+        "disagreement": 0.041666666666666664
+      }
+    }
+  },
+  "factorial_rater_sensitivity": {
+    "n": 1200,
+    "overall_disagreement": 0.0475,
+    "by_arm": {
+      "certainty_only": {
+        "n": 300,
+        "primary_rate": 0.42333333333333334,
+        "secondary_rate": 0.39,
+        "disagreement": 0.05333333333333334
+      },
+      "confidence_pressure": {
+        "n": 300,
+        "primary_rate": 0.47,
+        "secondary_rate": 0.47333333333333333,
+        "disagreement": 0.016666666666666666
+      },
+      "existence_directness": {
+        "n": 300,
+        "primary_rate": 0.6366666666666667,
+        "secondary_rate": 0.6633333333333333,
+        "disagreement": 0.05333333333333334
+      },
+      "neutral_repetition": {
+        "n": 300,
+        "primary_rate": 0.4,
+        "secondary_rate": 0.36666666666666664,
+        "disagreement": 0.06666666666666667
+      }
+    },
+    "contrasts": [
+      {
+        "contrast": "Certainty-only $-$ Neutral",
+        "n_pairs": 300,
+        "primary_rd": 0.023333333333333317,
+        "secondary_rd": 0.023333333333333373,
+        "secondary_minus_primary": 5.551115123125783e-17
+      },
+      {
+        "contrast": "Confidence $-$ Existence$\\times$Directness",
+        "n_pairs": 300,
+        "primary_rd": -0.16666666666666674,
+        "secondary_rd": -0.19,
+        "secondary_minus_primary": -0.02333333333333326
+      },
+      {
+        "contrast": "Confidence $-$ Neutral",
+        "n_pairs": 300,
+        "primary_rd": 0.06999999999999995,
+        "secondary_rd": 0.10666666666666669,
+        "secondary_minus_primary": 0.036666666666666736
+      }
+    ]
+  },
+  "heterogeneity": {
+    "n_human_negative": 164,
+    "n_item_clusters": 102,
+    "n_models_fixed": 6,
+    "reference_arm": "authority_pressure",
+    "global_wald_chi2": 9.09927703838326,
+    "global_df": 5,
+    "global_p": 0.10516925093256983,
+    "observed_fprs": {
+      "authority_pressure": {
+        "human_negative_n": 20,
+        "false_positive": 1,
+        "fpr": 0.05
+      },
+      "confidence_pressure": {
+        "human_negative_n": 28,
+        "false_positive": 5,
+        "fpr": 0.17857142857142858
+      },
+      "cue_baseline": {
+        "human_negative_n": 38,
+        "false_positive": 1,
+        "fpr": 0.02631578947368421
+      },
+      "existence_assertion": {
+        "human_negative_n": 32,
+        "false_positive": 3,
+        "fpr": 0.09375
+      },
+      "neutral_repetition": {
+        "human_negative_n": 25,
+        "false_positive": 1,
+        "fpr": 0.04
+      },
+      "spontaneous_baseline": {
+        "human_negative_n": 21,
+        "false_positive": 7,
+        "fpr": 0.3333333333333333
+      }
+    },
+    "pairwise": [
+      {
+        "left": "authority_pressure",
+        "right": "confidence_pressure",
+        "adjusted_fpr_difference": -0.12219226321510035,
+        "se": 0.0882191299072592,
+        "ci": [
+          -0.29510175783332837,
+          0.0507172314031277
+        ],
+        "p": 0.1660220777488558,
+        "holm_p": 1.0
+      },
+      {
+        "left": "authority_pressure",
+        "right": "cue_baseline",
+        "adjusted_fpr_difference": 0.040069153838204086,
+        "se": 0.061941514253616034,
+        "ci": [
+          -0.08133621409888334,
+          0.1614745217752915
+        ],
+        "p": 0.5177051478914865,
+        "holm_p": 1.0
+      },
+      {
+        "left": "authority_pressure",
+        "right": "existence_assertion",
+        "adjusted_fpr_difference": -0.03836514416103932,
+        "se": 0.0727892651041899,
+        "ci": [
+          -0.1810321037652515,
+          0.10430181544317288
+        ],
+        "p": 0.5981439657078884,
+        "holm_p": 1.0
+      },
+      {
+        "left": "authority_pressure",
+        "right": "neutral_repetition",
+        "adjusted_fpr_difference": 0.007846989558579376,
+        "se": 0.06453784950376461,
+        "ci": [
+          -0.11864719546879926,
+          0.134341174585958
+        ],
+        "p": 0.9032257898957992,
+        "holm_p": 1.0
+      },
+      {
+        "left": "authority_pressure",
+        "right": "spontaneous_baseline",
+        "adjusted_fpr_difference": -0.2845587373490136,
+        "se": 0.12413380465038516,
+        "ci": [
+          -0.5278609944637686,
+          -0.04125648023425868
+        ],
+        "p": 0.021885171314211128,
+        "holm_p": 0.2845072270847447
+      },
+      {
+        "left": "confidence_pressure",
+        "right": "cue_baseline",
+        "adjusted_fpr_difference": 0.16226141705330444,
+        "se": 0.08468556902506724,
+        "ci": [
+          -0.0037222982358273426,
+          0.32824513234243624
+        ],
+        "p": 0.05535928398145356,
+        "holm_p": 0.6089521237959892
+      },
+      {
+        "left": "confidence_pressure",
+        "right": "existence_assertion",
+        "adjusted_fpr_difference": 0.08382711905406104,
+        "se": 0.08986219466506305,
+        "ci": [
+          -0.09230278248946255,
+          0.25995702059758463
+        ],
+        "p": 0.35090218640667736,
+        "holm_p": 1.0
+      },
+      {
+        "left": "confidence_pressure",
+        "right": "neutral_repetition",
+        "adjusted_fpr_difference": 0.13003925277367973,
+        "se": 0.08185717007196831,
+        "ci": [
+          -0.030400800567378178,
+          0.2904793061147376
+        ],
+        "p": 0.11214809979161923,
+        "holm_p": 1.0
+      },
+      {
+        "left": "confidence_pressure",
+        "right": "spontaneous_baseline",
+        "adjusted_fpr_difference": -0.16236647413391325,
+        "se": 0.13187146628431765,
+        "ci": [
+          -0.4208345480511758,
+          0.09610159978334931
+        ],
+        "p": 0.2182301380138818,
+        "holm_p": 1.0
+      },
+      {
+        "left": "cue_baseline",
+        "right": "existence_assertion",
+        "adjusted_fpr_difference": -0.0784342979992434,
+        "se": 0.06369167377665881,
+        "ci": [
+          -0.20326997860149465,
+          0.04640138260300787
+        ],
+        "p": 0.21814764383341623,
+        "holm_p": 1.0
+      },
+      {
+        "left": "cue_baseline",
+        "right": "neutral_repetition",
+        "adjusted_fpr_difference": -0.03222216427962471,
+        "se": 0.05370162725137884,
+        "ci": [
+          -0.13747735369232722,
+          0.07303302513307781
+        ],
+        "p": 0.5484914931358997,
+        "holm_p": 1.0
+      },
+      {
+        "left": "cue_baseline",
+        "right": "spontaneous_baseline",
+        "adjusted_fpr_difference": -0.3246278911872177,
+        "se": 0.12683014400779963,
+        "ci": [
+          -0.5732149734425049,
+          -0.07604080893193041
+        ],
+        "p": 0.010480826270595031,
+        "holm_p": 0.15721239405892545
+      },
+      {
+        "left": "existence_assertion",
+        "right": "neutral_repetition",
+        "adjusted_fpr_difference": 0.046212133719618693,
+        "se": 0.06281414685230507,
+        "ci": [
+          -0.07690359411089925,
+          0.16932786155013663
+        ],
+        "p": 0.46191555843364973,
+        "holm_p": 1.0
+      },
+      {
+        "left": "existence_assertion",
+        "right": "spontaneous_baseline",
+        "adjusted_fpr_difference": -0.2461935931879743,
+        "se": 0.12557730841421433,
+        "ci": [
+          -0.49232511767983433,
+          -6.206869611422028e-05
+        ],
+        "p": 0.049938047434180274,
+        "holm_p": 0.5992565692101632
+      },
+      {
+        "left": "neutral_repetition",
+        "right": "spontaneous_baseline",
+        "adjusted_fpr_difference": -0.292405726907593,
+        "se": 0.11908830964161966,
+        "ci": [
+          -0.5258188138051675,
+          -0.05899264001001844
+        ],
+        "p": 0.014074009384668604,
+        "holm_p": 0.19703613138536047
+      }
+    ],
+    "model": "Linear probability model among reference-negative rows, arm and model fixed effects, item-clustered CR1 sandwich covariance; exploratory post-freeze test."
+  },
+  "power": {
+    "alpha": 0.05,
+    "power": 0.8,
+    "model_cluster_size": 8,
+    "scenarios": [
+      {
+        "scenario": "Observed extreme",
+        "p1": 0.02631578947368421,
+        "p2": 0.3333333333333333,
+        "independent_n_per_arm": 20,
+        "n_with_model_cluster_design_effect": {
+          "rho=0.05": 27,
+          "rho=0.10": 34,
+          "rho=0.20": 49
+        }
+      },
+      {
+        "scenario": "10-point difference",
+        "p1": 0.2,
+        "p2": 0.3,
+        "independent_n_per_arm": 292,
+        "n_with_model_cluster_design_effect": {
+          "rho=0.05": 395,
+          "rho=0.10": 497,
+          "rho=0.20": 701
+        }
+      },
+      {
+        "scenario": "15-point difference",
+        "p1": 0.2,
+        "p2": 0.35,
+        "independent_n_per_arm": 137,
+        "n_with_model_cluster_design_effect": {
+          "rho=0.05": 185,
+          "rho=0.10": 233,
+          "rho=0.20": 329
+        }
+      },
+      {
+        "scenario": "20-point difference",
+        "p1": 0.2,
+        "p2": 0.4,
+        "independent_n_per_arm": 81,
+        "n_with_model_cluster_design_effect": {
+          "rho=0.05": 110,
+          "rho=0.10": 138,
+          "rho=0.20": 195
+        }
+      }
+    ],
+    "caveat": "Planning approximations assume two equal independent proportions; design-effect rows are sensitivity calculations, not an estimated ICC or retrospective power proof."
+  }
+}

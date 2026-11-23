@@ -1,0 +1,5 @@
+| contrast | n_pairs | primary_rd | secondary_rd | secondary_minus_primary |
+| --- | --- | --- | --- | --- |
+| Certainty-only $-$ Neutral | 300 | +0.023 | +0.023 | +0.000 |
+| Confidence $-$ Existence$\times$Directness | 300 | -0.167 | -0.190 | -0.023 |
+| Confidence $-$ Neutral | 300 | +0.070 | +0.107 | +0.037 |

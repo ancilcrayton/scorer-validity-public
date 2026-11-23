@@ -1,0 +1,27 @@
+{
+  "out": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded.csv",
+  "n_rows": 1200,
+  "n_keys": 300,
+  "n_prefilled": 506,
+  "n_pending_labels": 0,
+  "seed": 20260804,
+  "arms": [
+    "neutral_repetition",
+    "confidence_pressure",
+    "certainty_only",
+    "existence_directness"
+  ],
+  "includes_v1_keys": true,
+  "labels_complete": true,
+  "primary_rater": {
+    "annotator_id": "A1",
+    "model": "mistralai/mistral-large-2512"
+  },
+  "secondary_rater": {
+    "annotator_id": "A2",
+    "model": "minimax/minimax-m3",
+    "path": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded_secondary_full.csv"
+  },
+  "annotation_seed": 20260729,
+  "temperature": 0.0
+}

@@ -1,0 +1,30 @@
+{
+  "name": "factorial_expanded",
+  "schema": "uup_unsupported_assertion",
+  "prompt": "prompt.md",
+  "settings": {
+    "temperature": 0.0,
+    "seed": 20260729,
+    "max_completion_tokens": 1024
+  },
+  "roles": {
+    "primary": {
+      "annotator_id": "A1",
+      "model": "mistralai/mistral-large-2512",
+      "input_csv": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded.csv"
+    },
+    "secondary": {
+      "annotator_id": "A2",
+      "model": "minimax/minimax-m3",
+      "input_csv": "data/confirmatory_v1/human_validation/factorial_paired_audit_expanded_secondary_full.csv",
+      "low_reasoning_fallback_record_ids": [
+        "qwen/qwen3-32b::clean_9e050df0a6::neutral_repetition::t1"
+      ]
+    }
+  },
+  "evidence_branches": [
+    "evidence_valid",
+    "evidence_false",
+    "evidence_reassurance"
+  ]
+}

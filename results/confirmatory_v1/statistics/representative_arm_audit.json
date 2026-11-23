@@ -1,0 +1,289 @@
+{
+  "status": "complete",
+  "n_labeled": 288,
+  "overall": {
+    "n": 288,
+    "tp": 120,
+    "fp": 18,
+    "fn": 4,
+    "tn": 146,
+    "precision": 0.8695652173913043,
+    "recall": 0.967741935483871,
+    "f1": 0.9160305343511451,
+    "agreement": 0.9236111111111112,
+    "fpr": 0.10975609756097561,
+    "sensitivity": 0.967741935483871,
+    "specificity": 0.8902439024390244
+  },
+  "by_arm": {
+    "spontaneous_baseline": {
+      "n": 48,
+      "tp": 27,
+      "fp": 7,
+      "fn": 0,
+      "tn": 14,
+      "precision": 0.7941176470588235,
+      "recall": 1.0,
+      "f1": 0.8852459016393442,
+      "agreement": 0.8541666666666666,
+      "fpr": 0.3333333333333333,
+      "sensitivity": 1.0,
+      "specificity": 0.6666666666666666,
+      "precision_interval": [
+        0.6320128389178601,
+        0.8965060397764868
+      ],
+      "fpr_interval": [
+        0.17194536432683688,
+        0.5462692434278971
+      ],
+      "signed_bias": 0.14583333333333334
+    },
+    "cue_baseline": {
+      "n": 48,
+      "tp": 7,
+      "fp": 1,
+      "fn": 3,
+      "tn": 37,
+      "precision": 0.875,
+      "recall": 0.7,
+      "f1": 0.7777777777777777,
+      "agreement": 0.9166666666666666,
+      "fpr": 0.02631578947368421,
+      "sensitivity": 0.7,
+      "specificity": 0.9736842105263158,
+      "precision_interval": [
+        0.5291051942301386,
+        0.9775830911367038
+      ],
+      "fpr_interval": [
+        0.004660467553530057,
+        0.13495178436800254
+      ],
+      "signed_bias": -0.041666666666666664
+    },
+    "neutral_repetition": {
+      "n": 48,
+      "tp": 23,
+      "fp": 1,
+      "fn": 0,
+      "tn": 24,
+      "precision": 0.9583333333333334,
+      "recall": 1.0,
+      "f1": 0.9787234042553191,
+      "agreement": 0.9791666666666666,
+      "fpr": 0.04,
+      "sensitivity": 1.0,
+      "specificity": 0.96,
+      "precision_interval": [
+        0.7975777375115778,
+        0.992606734645195
+      ],
+      "fpr_interval": [
+        0.007096050386699165,
+        0.19544472405022525
+      ],
+      "signed_bias": 0.020833333333333332
+    },
+    "existence_assertion": {
+      "n": 48,
+      "tp": 15,
+      "fp": 3,
+      "fn": 1,
+      "tn": 29,
+      "precision": 0.8333333333333334,
+      "recall": 0.9375,
+      "f1": 0.8823529411764706,
+      "agreement": 0.9166666666666666,
+      "fpr": 0.09375,
+      "sensitivity": 0.9375,
+      "specificity": 0.90625,
+      "precision_interval": [
+        0.6077750036164076,
+        0.9416352959953425
+      ],
+      "fpr_interval": [
+        0.032400962626319516,
+        0.24218499335778831
+      ],
+      "signed_bias": 0.041666666666666664
+    },
+    "confidence_pressure": {
+      "n": 48,
+      "tp": 20,
+      "fp": 5,
+      "fn": 0,
+      "tn": 23,
+      "precision": 0.8,
+      "recall": 1.0,
+      "f1": 0.888888888888889,
+      "agreement": 0.8958333333333334,
+      "fpr": 0.17857142857142858,
+      "sensitivity": 1.0,
+      "specificity": 0.8214285714285714,
+      "precision_interval": [
+        0.6086866446346177,
+        0.9113954589934752
+      ],
+      "fpr_interval": [
+        0.0787838582943011,
+        0.355917915485911
+      ],
+      "signed_bias": 0.10416666666666667
+    },
+    "authority_pressure": {
+      "n": 48,
+      "tp": 28,
+      "fp": 1,
+      "fn": 0,
+      "tn": 19,
+      "precision": 0.9655172413793104,
+      "recall": 1.0,
+      "f1": 0.9824561403508771,
+      "agreement": 0.9791666666666666,
+      "fpr": 0.05,
+      "sensitivity": 1.0,
+      "specificity": 0.95,
+      "precision_interval": [
+        0.8282410893529976,
+        0.9938869433859677
+      ],
+      "fpr_interval": [
+        0.008881219432873136,
+        0.23613589351256675
+      ],
+      "signed_bias": 0.020833333333333332
+    }
+  },
+  "hard_oversampled_550_by_arm": {
+    "spontaneous_baseline": {
+      "n": 24,
+      "tp": 13,
+      "fp": 6,
+      "fn": 0,
+      "tn": 5,
+      "precision": 0.6842105263157895,
+      "recall": 1.0,
+      "f1": 0.8125000000000001,
+      "agreement": 0.75,
+      "fpr": 0.5454545454545454,
+      "sensitivity": 1.0,
+      "specificity": 0.45454545454545453,
+      "precision_interval": [
+        0.4601001017506463,
+        0.846358289955714
+      ]
+    },
+    "cue_baseline": {
+      "n": 74,
+      "tp": 16,
+      "fp": 4,
+      "fn": 5,
+      "tn": 49,
+      "precision": 0.8,
+      "recall": 0.7619047619047619,
+      "f1": 0.7804878048780488,
+      "agreement": 0.8783783783783784,
+      "fpr": 0.07547169811320754,
+      "sensitivity": 0.7619047619047619,
+      "specificity": 0.9245283018867925,
+      "precision_interval": [
+        0.5839782779742401,
+        0.9193436467288
+      ]
+    },
+    "neutral_repetition": {
+      "n": 81,
+      "tp": 14,
+      "fp": 7,
+      "fn": 4,
+      "tn": 56,
+      "precision": 0.6666666666666666,
+      "recall": 0.7777777777777778,
+      "f1": 0.717948717948718,
+      "agreement": 0.8641975308641975,
+      "fpr": 0.1111111111111111,
+      "sensitivity": 0.7777777777777778,
+      "specificity": 0.8888888888888888,
+      "precision_interval": [
+        0.45373075657210293,
+        0.8280546356731631
+      ]
+    },
+    "existence_assertion": {
+      "n": 63,
+      "tp": 22,
+      "fp": 7,
+      "fn": 1,
+      "tn": 33,
+      "precision": 0.7586206896551724,
+      "recall": 0.9565217391304348,
+      "f1": 0.8461538461538461,
+      "agreement": 0.873015873015873,
+      "fpr": 0.175,
+      "sensitivity": 0.9565217391304348,
+      "specificity": 0.825,
+      "precision_interval": [
+        0.578920477816713,
+        0.8778173181493787
+      ]
+    },
+    "confidence_pressure": {
+      "n": 125,
+      "tp": 20,
+      "fp": 12,
+      "fn": 22,
+      "tn": 71,
+      "precision": 0.625,
+      "recall": 0.47619047619047616,
+      "f1": 0.5405405405405405,
+      "agreement": 0.728,
+      "fpr": 0.14457831325301204,
+      "sensitivity": 0.47619047619047616,
+      "specificity": 0.8554216867469879,
+      "precision_interval": [
+        0.45254100589525126,
+        0.7706633153404079
+      ]
+    },
+    "authority_pressure": {
+      "n": 111,
+      "tp": 19,
+      "fp": 11,
+      "fn": 16,
+      "tn": 65,
+      "precision": 0.6333333333333333,
+      "recall": 0.5428571428571428,
+      "f1": 0.5846153846153846,
+      "agreement": 0.7567567567567568,
+      "fpr": 0.14473684210526316,
+      "sensitivity": 0.5428571428571428,
+      "specificity": 0.8552631578947368,
+      "precision_interval": [
+        0.45513246433604937,
+        0.7812629779598231
+      ]
+    }
+  },
+  "dual": {
+    "n": 96,
+    "agreement": 0.9791666666666666,
+    "kappa": 0.958315240990013
+  },
+  "unpaired_diagnostics": {
+    "Authority - Existence": {
+      "automatic_rd": 0.22916666666666663,
+      "primary_rater_rd": 0.25000000000000006,
+      "bias_difference": -0.020833333333333332
+    },
+    "Confidence - Neutral": {
+      "automatic_rd": 0.02083333333333337,
+      "primary_rater_rd": -0.0625,
+      "bias_difference": 0.08333333333333334
+    }
+  },
+  "authority_existence_fpr_fisher_two_sided_p": 1.0,
+  "sampling": "representative arm x model",
+  "primary_rater": "Mistral Large 3 2512",
+  "secondary_rater": "MiniMax M3"
+}

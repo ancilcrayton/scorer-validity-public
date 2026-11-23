@@ -1,0 +1,79 @@
+{
+  "annotation_run_id": "unused_families_20260819",
+  "primary_model": "mistralai/mistral-large-2512",
+  "secondary_model": "minimax/minimax-m3",
+  "model_family_role_separation": "Mistral and MiniMax are not used as generation endpoints or automatic judges in these audits.",
+  "temperature": 0.0,
+  "seed": 20260729,
+  "protocol_exceptions": [
+    {
+      "record_id": "qwen/qwen3-32b::clean_9e050df0a6::neutral_repetition::t1",
+      "role": "secondary",
+      "reason": "Repeated null completions with reasoning disabled",
+      "fallback": "MiniMax M3 with low reasoning effort; all other settings unchanged"
+    }
+  ],
+  "released_labels": [
+    {
+      "role": "primary",
+      "model": "mistralai/mistral-large-2512",
+      "file": "representative_arm_audit.csv",
+      "rows": 288
+    },
+    {
+      "role": "secondary",
+      "model": "minimax/minimax-m3",
+      "file": "representative_arm_audit_dual.csv",
+      "rows": 96
+    },
+    {
+      "role": "primary",
+      "model": "mistralai/mistral-large-2512",
+      "file": "factorial_paired_audit_expanded.csv",
+      "rows": 1200
+    },
+    {
+      "role": "secondary",
+      "model": "minimax/minimax-m3",
+      "file": "factorial_paired_audit_expanded_secondary_full.csv",
+      "rows": 1200
+    },
+    {
+      "role": "primary",
+      "model": "mistralai/mistral-large-2512",
+      "file": "hard_audit_primary.csv",
+      "rows": 550
+    },
+    {
+      "role": "primary",
+      "model": "mistralai/mistral-large-2512",
+      "file": "paired_h3_audit.csv",
+      "rows": 200
+    },
+    {
+      "role": "primary",
+      "model": "mistralai/mistral-large-2512",
+      "file": "gaslight_scorer_audit.csv",
+      "rows": 300
+    },
+    {
+      "role": "secondary",
+      "model": "minimax/minimax-m3",
+      "file": "gaslight_scorer_audit_dual.csv",
+      "rows": 100
+    },
+    {
+      "role": "primary",
+      "model": "mistralai/mistral-large-2512",
+      "file": "sycon_judge_audit.csv",
+      "rows": 900
+    },
+    {
+      "role": "secondary",
+      "model": "minimax/minimax-m3",
+      "file": "sycon_judge_audit_dual.csv",
+      "rows": 300
+    }
+  ],
+  "note": "Historical human_* field names contain LLM-rater labels, not human annotations."
+}

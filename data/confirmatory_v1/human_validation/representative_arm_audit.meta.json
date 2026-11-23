@@ -1,0 +1,27 @@
+{
+  "n": 288,
+  "n_per_arm_target": 48,
+  "arms": [
+    "spontaneous_baseline",
+    "cue_baseline",
+    "neutral_repetition",
+    "existence_assertion",
+    "confidence_pressure",
+    "authority_pressure"
+  ],
+  "seed": 20260805,
+  "sampling": "uniform within arm\u00d7model on clean nonreferents; NOT hard-case oversampled",
+  "dual_n": 96,
+  "dual_path": "data/confirmatory_v1/human_validation/representative_arm_audit_dual.csv",
+  "labels_complete": true,
+  "primary_rater": {
+    "annotator_id": "A1",
+    "model": "mistralai/mistral-large-2512"
+  },
+  "secondary_rater": {
+    "annotator_id": "A2",
+    "model": "minimax/minimax-m3"
+  },
+  "annotation_seed": 20260729,
+  "temperature": 0.0
+}
